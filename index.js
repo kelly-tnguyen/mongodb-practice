@@ -30,7 +30,7 @@ const findSomething = function(db,callback) {
     // Get the documents collection
     const collection = db.collection('products');
     // Find some documents
-    let found = collection.find({});
+    let found = collection.find({name: `Almond`});
     found.toArray(function(err, docs) {
       assert.equal(err, null);
       console.log("Found the following records");
